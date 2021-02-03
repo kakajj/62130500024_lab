@@ -1,9 +1,17 @@
 const app = {
     data(){
         return{
-            msg:'Hello  Vue3'
+            msg:'Hello  Vue3',
+            show:true,
+            url: 'https://www.google.com/'       
         }
+    },
+    created(){
+        console.log('created');
+    },
+    updated(){
+        console.log('updated');
     }
 };
 
-Vue.createApp(app).mount('#app');
+var mountedApp = Vue.createApp(app).mount('#app');
